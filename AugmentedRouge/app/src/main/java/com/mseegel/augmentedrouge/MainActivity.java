@@ -24,6 +24,16 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //test code TODO: remove this code
+        Character character = CreateCharacter();
+        System.out.println(character.getName());
+        System.out.println(character.getCharacterClass().getName());
+    }
+
+    public Character CreateCharacter() {
+        Character character = new Character("Matthew", 100, 50);
+        System.out.println("hello");
+        return character;
     }
 
 }

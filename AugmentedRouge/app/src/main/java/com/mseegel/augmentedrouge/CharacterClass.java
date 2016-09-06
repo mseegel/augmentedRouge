@@ -7,7 +7,16 @@ public class CharacterClass {
 
     private String name;
 
-    public void CharacterClass(){
+    public CharacterClass(){
 
+
+    }
+
+    public CharacterClass(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
     }
 }
