@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Character character = CreateCharacter();
         System.out.println(character.getName());
         System.out.println(character.getCharacterClass().getName());
+        System.out.println(character.getSkills().get(0).getName());
     }
 
     public Character CreateCharacter() {

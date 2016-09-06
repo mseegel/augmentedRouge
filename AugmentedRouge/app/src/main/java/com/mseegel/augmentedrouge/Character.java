@@ -1,5 +1,6 @@
 package com.mseegel.augmentedrouge;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public class Character {
     private int def;
     private int speed;
     private CharacterClass characterClass;
-    private List<Skill> skills;
+    private ArrayList<Skill> skillList = new ArrayList<Skill>();
 
     public  Character() {
 
@@ -29,8 +30,10 @@ public class Character {
         this.curHP = curHP;
         CharacterClass characterClass = createCharacterClass();
         this.characterClass = characterClass;
-        Skill skill = new Skill(1, "heavy hit");
-        skills.add(1,skill);
+        ArrayList<Skill> skills = new ArrayList<Skill>();
+        skills = createSkills();
+        this.skillList = skills;
+        System.out.println(skills.size());
     }
 
     public CharacterClass createCharacterClass(){
@@ -64,6 +67,16 @@ public class Character {
 
     public CharacterClass getCharacterClass(){
         return characterClass;
+    }
+
+    private ArrayList<Skill> createSkills() {
+        ArrayList<Skill> skills = new ArrayList<Skill>();
+        skills.add(new Skill("Heavy Blow"));
+        return skills;
+    }
+
+    public ArrayList<Skill> getSkills() {
+        return this.skillList;
     }
 
 }
