@@ -8,8 +8,17 @@ public class Armor extends Item{
     private int slot;
     private int def;
     private int skill;
+    private String name;
 
-    public void Armor(){
+    public Armor(){
 
+    }
+
+    public Armor(String name) {
+        this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
     }
 }

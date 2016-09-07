@@ -18,6 +18,8 @@ public class Character {
     private int speed;
     private CharacterClass characterClass;
     private ArrayList<Skill> skillList = new ArrayList<Skill>();
+    private ArrayList<Armor> armorList = new ArrayList<Armor>();
+    private Weapon weapon;
 
     public  Character() {
 
@@ -33,7 +35,11 @@ public class Character {
         ArrayList<Skill> skills = new ArrayList<Skill>();
         skills = createSkills();
         this.skillList = skills;
-        System.out.println(skills.size());
+        ArrayList<Armor> armor = new ArrayList<Armor>();
+        armor = createArmor();
+        this.armorList = armor;
+        Weapon weapon = new Weapon("Long Sword");
+        this.weapon = weapon;
     }
 
     public CharacterClass createCharacterClass(){
@@ -77,6 +83,20 @@ public class Character {
 
     public ArrayList<Skill> getSkills() {
         return this.skillList;
+    }
+
+    public ArrayList<Armor> createArmor(){
+        ArrayList<Armor> armorList = new ArrayList<Armor>();
+        armorList.add(new Armor("Bronze Breast Plate"));
+        return armorList;
+    }
+
+    public ArrayList<Armor> getArmorList(){
+        return this.armorList;
+    }
+
+    public Weapon getWeapon(){
+        return this.weapon;
     }
 
 }
