@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
         });
         //test code TODO: remove this code
         Character character = CreateCharacter();
-        System.out.println(character.getName());
-        System.out.println(character.getCharacterClass().getName());
-        System.out.println(character.getSkills().get(0).getName());
-        System.out.println(character.getArmorList().get(0).getName());
-        System.out.println(character.getWeapon().getName());
+        Debugger db = new Debugger();
+        db.print(character.getName());
+        db.print(character.getCharacterClass().getName());
+        db.print(character.getSkills().get(0).getName());
+        db.print(character.getArmorList().get(0).getName());
+        db.print(character.getWeapon().getName());
     }
 
     public Character CreateCharacter() {
